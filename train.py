@@ -2,7 +2,7 @@ import torch
 import wandb
 import hydra
 from tqdm import tqdm
-
+# ceci un test de changement , 
 logger = wandb.init(project="challenge", name="run")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
