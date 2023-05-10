@@ -1,0 +1,64 @@
+What we do is called : semi supervised learning. 
+Very important to know the number of parameter of the model. Try to compare it to the number of input.
+But no real quantitative comparison between the number of parameter of the model and number of input.
+
+We can visualise as heatmaps what is done in the conv layers
+
+for a ViT -> an input is a patch 
+for a standard classifier -> an input = an image.
+
+Pooling layer, make the data smaller and make manipulable at large scale. -> divide by 2 the data.
+Effect = invariance to small translation of the input ! 
+
+Regularization: dropout : not very used in transformer nowadays but still usefull.
+random freezing of parameters -> Compel the network to learn different ways to classify/do the task.
+
+Activation function: if you don't know what to do use use ReLU.
+
+Normalizations: Batch norm= average over a batch
+Layer norm = average over the channel
+Instance norm = average for a particular image.
+
+Inputs: Very important for the challenge : DATA AUGMENTATION
+Artificially augment the size of the dataset.
+Fake type of training set, that is more diverse.
+Use Jittering from python = horizontal flip, random crop , color casting, geometric distortion.
+important for interprability. 
+random crop = be carefull that the area selected correspond to the label of the image. + we need to resize the image afterwards ! 
+ 
+Loss fn: use MSE for regression and CrossEntropy for classification. 
+
+REgular design : all conv are 3x3 stride 1 pad 1 -> VGGNET
+all maxpool are 2x2 stride 2 
+After pool -> double the # of channel 
+After VGGNET -> Resnet -> added residual connections.
+
+Conseils pratiques: 
+
+wait and bias : Wandb à utiliser: pour comparerles différentes expériences. 
+
+Good code organisation: use github/git to version and share your code.
+
+Hydra to organizze your hparameters and different modules.
+
+Don't work on notebooks. 
+
+Faire de la cross validation:
+
+fixer la seed pour comparer les expériences-> c'est important ! 
+
+Ne pas overfit sur les publics tests set ! car a la fin on aura de mauvais résultats. 
+---------------------------------------------------------------
+Average les méthodes de 2 classifiers: 
+Méthodes ensemblistes. 
+------------------------------------------
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+Pour celui qui créer son repository pour la première faire: 
+git init 
+# faire des modifs etc 
+git add . (ajoute tout les fichiers
+git commit -m "init, on initialise le repository"
+git remote add origin "https://github.com/..."
+git push -u origin master 
+
+----------------------------
+Pour updater : 
+git add index.html (ce qu'on a modifié)
+git commit -m "changement index"
+git push 
+Puis on a updater le repository ! 
+------
+updater à partir d'un clonqge : 
+ git clone https...
+# modification 
+cd se placer bien dans le repository 
+git status (pour vérifier qu'on est bien dans le repository !!)
+git add .
+git commit -m "ajout.."
+git push
+---------------
+Si d'autres personnes ont également accès au repository, ils pourront voir vos modifications en effectuant un git pull pour mettre à jour leur copie locale du repository :
