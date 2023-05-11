@@ -22,4 +22,14 @@ git add .
 git commit -m "ajout.."
 git push
 ---------------
-Si d'autres personnes ont également accès au repository, ils pourront voir vos modifications en effectuant un git pull pour mettre à jour leur copie locale du repository :
+Si d'autres personnes ont également accès au repository, ils pourront voir vos modifications en effectuant 
+un git pull pour mettre à jour leur copie locale du repository :
+
+----- 
+pour supprimer un fichier, le supprimer ne suffit pas 
+et un commit ne suffit pas, il faut faire en plus
+git rm <file>
+ou alors git restore <file>
+---------
+si c'est ne vert c'est bon, ça a été commit mais pas push 
+Si c'est en rouge ça n'a pas été encore commit ! 
